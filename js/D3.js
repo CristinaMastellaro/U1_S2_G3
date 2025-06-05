@@ -37,7 +37,6 @@ const starWarsCharacters = [
     hair_color: "none",
     skin_color: "white",
     eye_color: "yellow",
-    eye_color: "yellow",
     birth_year: "41.9BBY",
     gender: "male",
   },
@@ -275,7 +274,8 @@ switch (starWarsCharacters[randomNumber].gender) {
 }
 
 let hair =
-  starWarsCharacters[randomNumber].hair_color === "n/a"
+  starWarsCharacters[randomNumber].hair_color === "n/a" ||
+  starWarsCharacters[randomNumber].hair_color === "none"
     ? "no"
     : starWarsCharacters[randomNumber].hair_color;
 
@@ -314,5 +314,9 @@ console.log(
     starWarsCharacters[randomNumber].mass +
     " and a height of " +
     starWarsCharacters[randomNumber].height +
-    " centimeters."
+    " centimeters.\nNow that you have the basic information about " +
+    starWarsCharacters[randomNumber].name +
+    ", we encourage you to get to know " +
+    pronounObj +
+    "! May friendship be your strength!"
 );

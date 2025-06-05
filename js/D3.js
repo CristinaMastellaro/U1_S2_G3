@@ -170,9 +170,12 @@ for (let i = 0; i < length; i++) {
       eyeColor["blue-gray"].push(starWarsCharacters[i]);
       break;
   }
+  // potevi mettere un default con un messaggio
 }
 
 console.log("Let's see the characters' eye colors!", eyeColor);
+
+// bah, io sto 'break' non l'ho capito molto bene
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
@@ -211,6 +214,8 @@ if (crewMass < 500) {
 } else {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
 }
+
+// Non serviva mettere negli else if creMass >= ..., perché è ovvio, dato che non soddisfa la condizione precedente.
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
@@ -251,7 +256,9 @@ console.log(
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 
-let randomNumber = Math.floor(Math.random() * 11);
+let randomNumber = Math.floor(Math.random() * length);
+
+// avevo sbagliato a mettere il numero... Per questo forse veniva fuori quell'errore strano
 
 let pronounSub = "";
 let pronounObj = "";

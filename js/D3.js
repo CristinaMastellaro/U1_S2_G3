@@ -178,15 +178,15 @@ console.log("Let's see the characters' eye colors!", eyeColor);
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
 
-let i = 0;
-let totalMass = 0;
+let num = 0;
+let crewMass = 0;
 
-while (i < length) {
-  totalMass += starWarsCharacters[i].mass;
-  i++;
+while (num < length) {
+  crewMass += starWarsCharacters[num].mass;
+  num++;
 }
 
-console.log("This is the crew's total mass", totalMass);
+console.log("This is the crew's total mass", crewMass);
 
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
@@ -200,13 +200,13 @@ console.log("This is the crew's total mass", totalMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-if (totalMass < 500) {
+if (crewMass < 500) {
   console.log("Ship is under loaded");
-} else if (totalMass >= 500 && totalMass < 700) {
+} else if (crewMass >= 500 && crewMass < 700) {
   console.log("Ship is half loaded");
-} else if (totalMass >= 700 && totalMass < 900) {
+} else if (crewMass >= 700 && crewMass < 900) {
   console.log("Warning: Load is over 700");
-} else if (totalMass >= 900 && totalMass < 1000) {
+} else if (crewMass >= 900 && crewMass < 1000) {
   console.log("Critical Load: Over 900");
 } else {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
@@ -223,7 +223,7 @@ for (let i = 0; i < length; i++) {
 }
 
 console.log(
-  "We made some changes on some members' gender:",
+  "We made some changes on some members' gender, would you mind to check it?",
   starWarsCharacters
 );
 
@@ -231,6 +231,8 @@ console.log(
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
+
+console.log("This is the number of the crew members:", charactersNames.length);
 
 for (let i = 0; i < length; i++) {
   for (let k = 0; k < femaleCharacters.length; k++) {
@@ -241,7 +243,7 @@ for (let i = 0; i < length; i++) {
 }
 
 console.log(
-  "This is the number of the not female crew members':",
+  "This is the number of the not female crew members:",
   charactersNames.length
 );
 
